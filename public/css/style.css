@@ -1,0 +1,1079 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+  scroll-behavior: smooth;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+body {
+  margin: 0 auto;
+  background-color: #000000;
+}
+
+body header {
+  background-color: #00000099;
+  -webkit-backdrop-filter: blur(32px);
+          backdrop-filter: blur(32px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+body header nav {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 24px 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body header nav.web {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body header nav.app {
+  display: none;
+}
+
+body header nav.mobile {
+  display: none;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+body header nav.mobile ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body header nav.mobile ul li {
+  margin: 16px 16px;
+}
+
+body header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+body header nav ul.left {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+body header nav ul.center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body header nav ul.right {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+body header nav ul.right li:nth-of-type(3) a {
+  color: #C7F702;
+}
+
+body header nav ul li {
+  margin: 0 16px;
+}
+
+body header nav ul li a {
+  color: #AAAAAA;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+body header nav ul li a.active, body header nav ul li a:nth-of-type(3) {
+  color: #C7F702;
+}
+
+body header nav ul li a:hover {
+  color: #C7F702;
+}
+
+body header nav ul li a img {
+  display: -ms-grid;
+  display: grid;
+}
+
+body main {
+  margin-top: 79px;
+  background-color: #000000;
+}
+
+body main .hero-cont {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 48px 96px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .hero-cont .cont-desc {
+  width: 50%;
+}
+
+body main .hero-cont .cont-desc h1 {
+  color: #FFFFFF;
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 700;
+  background-image: radial-gradient(#FFFFFF, #FFFFFF99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body main .hero-cont .cont-desc p {
+  color: #AAAAAA;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+body main .hero-cont .cont-desc p a {
+  color: #C7F702;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+body main .hero-cont .cont-desc p a:hover {
+  color: #DB51E6;
+}
+
+body main .hero-cont .cont-desc ul {
+  list-style-type: none;
+  padding: 32px 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+body main .hero-cont .cont-desc ul li {
+  margin: 0 32px 0 0;
+}
+
+body main .hero-cont .cont-desc ul li button {
+  cursor: pointer;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 0;
+  color: #000000;
+}
+
+body main .hero-cont .cont-desc ul li button.primary {
+  background-color: #C7F702;
+}
+
+body main .hero-cont .cont-desc ul li button.secondary {
+  background-color: #FFFFFF;
+}
+
+body main .hero-cont .cont-desc ul li button:hover {
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+body main .hero-cont .cont-desc form {
+  padding: 32px 0;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+}
+
+body main .hero-cont .cont-desc form span.err {
+  color: red;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+body main .hero-cont .cont-desc form input, body main .hero-cont .cont-desc form select, body main .hero-cont .cont-desc form textarea {
+  width: 100%;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 8px 0;
+  background-color: #000000;
+  border: 1px solid #AAAAAA;
+  color: #FFFFFF;
+}
+
+body main .hero-cont .cont-desc form input::-webkit-input-placeholder, body main .hero-cont .cont-desc form select::-webkit-input-placeholder, body main .hero-cont .cont-desc form textarea::-webkit-input-placeholder {
+  color: #AAAAAA;
+}
+
+body main .hero-cont .cont-desc form input:-ms-input-placeholder, body main .hero-cont .cont-desc form select:-ms-input-placeholder, body main .hero-cont .cont-desc form textarea:-ms-input-placeholder {
+  color: #AAAAAA;
+}
+
+body main .hero-cont .cont-desc form input::-ms-input-placeholder, body main .hero-cont .cont-desc form select::-ms-input-placeholder, body main .hero-cont .cont-desc form textarea::-ms-input-placeholder {
+  color: #AAAAAA;
+}
+
+body main .hero-cont .cont-desc form input::placeholder, body main .hero-cont .cont-desc form select::placeholder, body main .hero-cont .cont-desc form textarea::placeholder {
+  color: #AAAAAA;
+}
+
+body main .hero-cont .cont-desc form input:focus, body main .hero-cont .cont-desc form select:focus, body main .hero-cont .cont-desc form textarea:focus {
+  outline: 0;
+  border: 1px solid #C7F702;
+}
+
+body main .hero-cont .cont-desc form input[type=submit], body main .hero-cont .cont-desc form select[type=submit], body main .hero-cont .cont-desc form textarea[type=submit] {
+  font-weight: 500;
+  cursor: pointer;
+  color: #000000;
+  background-color: #C7F702;
+  border: 0;
+}
+
+body main .hero-cont .cont-desc form input[type=submit]:hover, body main .hero-cont .cont-desc form select[type=submit]:hover, body main .hero-cont .cont-desc form textarea[type=submit]:hover {
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+body main .hero-cont figure {
+  margin: 0 auto;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+body main .hero-cont figure img {
+  width: 88%;
+  display: -ms-grid;
+  display: grid;
+}
+
+body main .feature-cont {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 48px 96px;
+}
+
+body main .feature-cont .cont-desc {
+  text-align: center;
+}
+
+body main .feature-cont .cont-desc h1 {
+  color: #FFFFFF;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  background-image: radial-gradient(#FFFFFF, #FFFFFF99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body main .feature-cont .cont-desc p {
+  color: #AAAAAA;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+body main .feature-cont .cont-desc .desc-flex {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (24%)[4];
+      grid-template-columns: repeat(4, 24%);
+  gap: 0 1.34%;
+  margin: 64px 0 40px 0;
+}
+
+body main .feature-cont .cont-desc .desc-flex .flex {
+  cursor: default;
+  padding: 8px 16px;
+  text-align: center;
+}
+
+body main .feature-cont .cont-desc .desc-flex .flex:hover {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+body main .feature-cont .cont-desc .desc-flex .flex:nth-of-type(odd) {
+  margin: 48px 0 0 0;
+  background-color: #000000;
+}
+
+body main .feature-cont .cont-desc .desc-flex .flex:nth-of-type(even) {
+  border: 16px solid #1C1C1C;
+  background-color: #1C1C1C;
+  margin: 0 0 48px 0;
+}
+
+body main .feature-cont .cont-desc .desc-flex .flex:nth-of-type(1) {
+  border: 16px solid;
+  -o-border-image: linear-gradient(90deg, #F2E3BA, #E97B60) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(#F2E3BA), to(#E97B60)) 1;
+     border-image: linear-gradient(90deg, #F2E3BA, #E97B60) 1;
+}
+
+body main .feature-cont .cont-desc .desc-flex .flex:nth-of-type(3) {
+  border: 16px solid;
+  -o-border-image: linear-gradient(90deg, #DB51E6, #958CEC) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(#DB51E6), to(#958CEC)) 1;
+     border-image: linear-gradient(90deg, #DB51E6, #958CEC) 1;
+}
+
+body main .feature-cont .cont-desc .desc-flex .flex figure {
+  margin: 8px auto;
+  width: 100%;
+}
+
+body main .feature-cont .cont-desc .desc-flex .flex figure img {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 80px;
+}
+
+body main .feature-cont .cont-desc .desc-flex .flex h2 {
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  background-image: radial-gradient(#FFFFFF, #FFFFFF99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body main .feature-cont .cont-desc .desc-flex .flex p {
+  color: #AAAAAA;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+body main .plan-cont, body main .action-cont {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 48px 96px;
+}
+
+body main .plan-cont .cont-desc, body main .action-cont .cont-desc {
+  text-align: center;
+}
+
+body main .plan-cont .cont-desc h1, body main .action-cont .cont-desc h1 {
+  color: #FFFFFF;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  background-image: radial-gradient(#FFFFFF, #FFFFFF99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body main .plan-cont .cont-desc p, body main .action-cont .cont-desc p {
+  color: #AAAAAA;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+body main .plan-cont .cont-desc p span, body main .action-cont .cont-desc p span {
+  font-size: 24px;
+  font-weight: 700;
+  color: #C7F702;
+}
+
+body main .plan-cont .cont-desc p a, body main .action-cont .cont-desc p a {
+  color: #C7F702;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+body main .plan-cont .cont-desc p a:hover, body main .action-cont .cont-desc p a:hover {
+  color: #DB51E6;
+}
+
+body main .plan-cont .cont-desc form, body main .action-cont .cont-desc form {
+  padding: 32px 0;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+}
+
+body main .plan-cont .cont-desc form span.err, body main .action-cont .cont-desc form span.err {
+  color: red;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+body main .plan-cont .cont-desc form input, body main .plan-cont .cont-desc form select, body main .plan-cont .cont-desc form textarea, body main .action-cont .cont-desc form input, body main .action-cont .cont-desc form select, body main .action-cont .cont-desc form textarea {
+  width: 100%;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 8px 0;
+  background-color: #000000;
+  border: 1px solid #AAAAAA;
+  color: #FFFFFF;
+}
+
+body main .plan-cont .cont-desc form input::-webkit-input-placeholder, body main .plan-cont .cont-desc form select::-webkit-input-placeholder, body main .plan-cont .cont-desc form textarea::-webkit-input-placeholder, body main .action-cont .cont-desc form input::-webkit-input-placeholder, body main .action-cont .cont-desc form select::-webkit-input-placeholder, body main .action-cont .cont-desc form textarea::-webkit-input-placeholder {
+  color: #AAAAAA;
+}
+
+body main .plan-cont .cont-desc form input:-ms-input-placeholder, body main .plan-cont .cont-desc form select:-ms-input-placeholder, body main .plan-cont .cont-desc form textarea:-ms-input-placeholder, body main .action-cont .cont-desc form input:-ms-input-placeholder, body main .action-cont .cont-desc form select:-ms-input-placeholder, body main .action-cont .cont-desc form textarea:-ms-input-placeholder {
+  color: #AAAAAA;
+}
+
+body main .plan-cont .cont-desc form input::-ms-input-placeholder, body main .plan-cont .cont-desc form select::-ms-input-placeholder, body main .plan-cont .cont-desc form textarea::-ms-input-placeholder, body main .action-cont .cont-desc form input::-ms-input-placeholder, body main .action-cont .cont-desc form select::-ms-input-placeholder, body main .action-cont .cont-desc form textarea::-ms-input-placeholder {
+  color: #AAAAAA;
+}
+
+body main .plan-cont .cont-desc form input::placeholder, body main .plan-cont .cont-desc form select::placeholder, body main .plan-cont .cont-desc form textarea::placeholder, body main .action-cont .cont-desc form input::placeholder, body main .action-cont .cont-desc form select::placeholder, body main .action-cont .cont-desc form textarea::placeholder {
+  color: #AAAAAA;
+}
+
+body main .plan-cont .cont-desc form input:focus, body main .plan-cont .cont-desc form select:focus, body main .plan-cont .cont-desc form textarea:focus, body main .action-cont .cont-desc form input:focus, body main .action-cont .cont-desc form select:focus, body main .action-cont .cont-desc form textarea:focus {
+  outline: 0;
+  border: 1px solid #C7F702;
+}
+
+body main .plan-cont .cont-desc form input[type=submit], body main .plan-cont .cont-desc form select[type=submit], body main .plan-cont .cont-desc form textarea[type=submit], body main .action-cont .cont-desc form input[type=submit], body main .action-cont .cont-desc form select[type=submit], body main .action-cont .cont-desc form textarea[type=submit] {
+  font-weight: 500;
+  cursor: pointer;
+  color: #000000;
+  background-color: #C7F702;
+  border: 0;
+}
+
+body main .plan-cont .cont-desc form input[type=submit]:hover, body main .plan-cont .cont-desc form select[type=submit]:hover, body main .plan-cont .cont-desc form textarea[type=submit]:hover, body main .action-cont .cont-desc form input[type=submit]:hover, body main .action-cont .cont-desc form select[type=submit]:hover, body main .action-cont .cont-desc form textarea[type=submit]:hover {
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+body main .plan-cont .cont-desc .desc-plan, body main .plan-cont .cont-desc .desc-action, body main .action-cont .cont-desc .desc-plan, body main .action-cont .cont-desc .desc-action {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (24%)[4];
+      grid-template-columns: repeat(4, 24%);
+  gap: 24px 1.34%;
+  margin: 64px 0 40px 0;
+}
+
+body main .plan-cont .cont-desc .desc-plan .plan, body main .plan-cont .cont-desc .desc-plan .action, body main .plan-cont .cont-desc .desc-action .plan, body main .plan-cont .cont-desc .desc-action .action, body main .action-cont .cont-desc .desc-plan .plan, body main .action-cont .cont-desc .desc-plan .action, body main .action-cont .cont-desc .desc-action .plan, body main .action-cont .cont-desc .desc-action .action {
+  background-color: #1C1C1C;
+  border: 16px solid #1C1C1C;
+  cursor: default;
+}
+
+body main .plan-cont .cont-desc .desc-plan .plan:hover, body main .plan-cont .cont-desc .desc-plan .action:hover, body main .plan-cont .cont-desc .desc-action .plan:hover, body main .plan-cont .cont-desc .desc-action .action:hover, body main .action-cont .cont-desc .desc-plan .plan:hover, body main .action-cont .cont-desc .desc-plan .action:hover, body main .action-cont .cont-desc .desc-action .plan:hover, body main .action-cont .cont-desc .desc-action .action:hover {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+body main .plan-cont .cont-desc .desc-plan .plan figure, body main .plan-cont .cont-desc .desc-plan .action figure, body main .plan-cont .cont-desc .desc-action .plan figure, body main .plan-cont .cont-desc .desc-action .action figure, body main .action-cont .cont-desc .desc-plan .plan figure, body main .action-cont .cont-desc .desc-plan .action figure, body main .action-cont .cont-desc .desc-action .plan figure, body main .action-cont .cont-desc .desc-action .action figure {
+  margin: 8px auto;
+  width: 100%;
+}
+
+body main .plan-cont .cont-desc .desc-plan .plan figure img, body main .plan-cont .cont-desc .desc-plan .action figure img, body main .plan-cont .cont-desc .desc-action .plan figure img, body main .plan-cont .cont-desc .desc-action .action figure img, body main .action-cont .cont-desc .desc-plan .plan figure img, body main .action-cont .cont-desc .desc-plan .action figure img, body main .action-cont .cont-desc .desc-action .plan figure img, body main .action-cont .cont-desc .desc-action .action figure img {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 48px;
+}
+
+body main .plan-cont .cont-desc .desc-plan .plan h2, body main .plan-cont .cont-desc .desc-plan .action h2, body main .plan-cont .cont-desc .desc-action .plan h2, body main .plan-cont .cont-desc .desc-action .action h2, body main .action-cont .cont-desc .desc-plan .plan h2, body main .action-cont .cont-desc .desc-plan .action h2, body main .action-cont .cont-desc .desc-action .plan h2, body main .action-cont .cont-desc .desc-action .action h2 {
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  background-image: radial-gradient(#FFFFFF, #FFFFFF99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body main .plan-cont .cont-desc .desc-plan .plan p, body main .plan-cont .cont-desc .desc-plan .action p, body main .plan-cont .cont-desc .desc-action .plan p, body main .plan-cont .cont-desc .desc-action .action p, body main .action-cont .cont-desc .desc-plan .plan p, body main .action-cont .cont-desc .desc-plan .action p, body main .action-cont .cont-desc .desc-action .plan p, body main .action-cont .cont-desc .desc-action .action p {
+  color: #AAAAAA;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+body main .plan-cont .cont-desc .desc-plan .plan button, body main .plan-cont .cont-desc .desc-plan .action button, body main .plan-cont .cont-desc .desc-action .plan button, body main .plan-cont .cont-desc .desc-action .action button, body main .action-cont .cont-desc .desc-plan .plan button, body main .action-cont .cont-desc .desc-plan .action button, body main .action-cont .cont-desc .desc-action .plan button, body main .action-cont .cont-desc .desc-action .action button {
+  cursor: pointer;
+  margin: 16px 0 32px 0;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 0;
+}
+
+body main .plan-cont .cont-desc .desc-plan .plan button.primary, body main .plan-cont .cont-desc .desc-plan .action button.primary, body main .plan-cont .cont-desc .desc-action .plan button.primary, body main .plan-cont .cont-desc .desc-action .action button.primary, body main .action-cont .cont-desc .desc-plan .plan button.primary, body main .action-cont .cont-desc .desc-plan .action button.primary, body main .action-cont .cont-desc .desc-action .plan button.primary, body main .action-cont .cont-desc .desc-action .action button.primary {
+  background-color: #C7F702;
+}
+
+body main .plan-cont .cont-desc .desc-plan .plan button:hover, body main .plan-cont .cont-desc .desc-plan .action button:hover, body main .plan-cont .cont-desc .desc-action .plan button:hover, body main .plan-cont .cont-desc .desc-action .action button:hover, body main .action-cont .cont-desc .desc-plan .plan button:hover, body main .action-cont .cont-desc .desc-plan .action button:hover, body main .action-cont .cont-desc .desc-action .plan button:hover, body main .action-cont .cont-desc .desc-action .action button:hover {
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+body main .plan-cont .cont-desc .desc-plan .master, body main .plan-cont .cont-desc .desc-action .master, body main .action-cont .cont-desc .desc-plan .master, body main .action-cont .cont-desc .desc-action .master {
+  background-color: #000000;
+  border: 16px solid;
+  -o-border-image: linear-gradient(90deg, #C7F702, #506400) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(#C7F702), to(#506400)) 1;
+     border-image: linear-gradient(90deg, #C7F702, #506400) 1;
+}
+
+body main .feedback-cont {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 48px 96px;
+}
+
+body main .feedback-cont .cont-desc {
+  text-align: center;
+}
+
+body main .feedback-cont .cont-desc h1 {
+  color: #FFFFFF;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  background-image: radial-gradient(#FFFFFF, #FFFFFF99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body main .feedback-cont .cont-desc p {
+  color: #AAAAAA;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+body main .feedback-cont .cont-desc form {
+  padding: 32px 0;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+}
+
+body main .feedback-cont .cont-desc form span.err {
+  color: red;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+body main .feedback-cont .cont-desc form input, body main .feedback-cont .cont-desc form select, body main .feedback-cont .cont-desc form textarea {
+  width: 100%;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 8px 0;
+  background-color: #000000;
+  border: 1px solid #AAAAAA;
+  color: #FFFFFF;
+}
+
+body main .feedback-cont .cont-desc form input::-webkit-input-placeholder, body main .feedback-cont .cont-desc form select::-webkit-input-placeholder, body main .feedback-cont .cont-desc form textarea::-webkit-input-placeholder {
+  color: #AAAAAA;
+}
+
+body main .feedback-cont .cont-desc form input:-ms-input-placeholder, body main .feedback-cont .cont-desc form select:-ms-input-placeholder, body main .feedback-cont .cont-desc form textarea:-ms-input-placeholder {
+  color: #AAAAAA;
+}
+
+body main .feedback-cont .cont-desc form input::-ms-input-placeholder, body main .feedback-cont .cont-desc form select::-ms-input-placeholder, body main .feedback-cont .cont-desc form textarea::-ms-input-placeholder {
+  color: #AAAAAA;
+}
+
+body main .feedback-cont .cont-desc form input::placeholder, body main .feedback-cont .cont-desc form select::placeholder, body main .feedback-cont .cont-desc form textarea::placeholder {
+  color: #AAAAAA;
+}
+
+body main .feedback-cont .cont-desc form input:focus, body main .feedback-cont .cont-desc form select:focus, body main .feedback-cont .cont-desc form textarea:focus {
+  outline: 0;
+  border: 1px solid #C7F702;
+}
+
+body main .feedback-cont .cont-desc form input[type=submit], body main .feedback-cont .cont-desc form select[type=submit], body main .feedback-cont .cont-desc form textarea[type=submit] {
+  font-weight: 500;
+  cursor: pointer;
+  color: #000000;
+  background-color: #C7F702;
+  border: 0;
+}
+
+body main .feedback-cont .cont-desc form input[type=submit]:hover, body main .feedback-cont .cont-desc form select[type=submit]:hover, body main .feedback-cont .cont-desc form textarea[type=submit]:hover {
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+body main .feedback-cont .cont-desc .scroller {
+  height: 480px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+body main .feedback-cont .cont-desc .scroller h2 {
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  background-image: radial-gradient(#FFFFFF, #FFFFFF99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body main .feedback-cont .cont-desc .scroller table {
+  margin: 48px 0 0 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+body main .feedback-cont .cont-desc .scroller table tr th, body main .feedback-cont .cont-desc .scroller table tr td {
+  border: 1px solid #AAAAAA;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+body main .feedback-cont .cont-desc .scroller table tr th {
+  color: #C7F702;
+}
+
+body main .feedback-cont .cont-desc .scroller table tr td {
+  color: #AAAAAA;
+}
+
+body main .feedback-cont .cont-desc ul {
+  list-style-type: none;
+  padding: 32px 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .feedback-cont .cont-desc ul li button {
+  cursor: pointer;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 0;
+}
+
+body main .feedback-cont .cont-desc ul li button.primary {
+  background-color: #C7F702;
+}
+
+body main .feedback-cont .cont-desc ul li button.secondary {
+  background-color: #FFFFFF;
+}
+
+body main .feedback-cont .cont-desc ul li button:hover {
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+body main .feedback-cont .cont-desc .desc-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (32.3%)[3];
+      grid-template-columns: repeat(3, 32.3%);
+  gap: 24px 1.56%;
+  margin: 64px 0 40px 0;
+}
+
+body main .feedback-cont .cont-desc .desc-grid .grid {
+  cursor: default;
+  padding: 8px 16px;
+  text-align: center;
+}
+
+body main .feedback-cont .cont-desc .desc-grid .grid:nth-of-type(odd) {
+  border: 1px solid #C7F702;
+  background-color: #000000;
+}
+
+body main .feedback-cont .cont-desc .desc-grid .grid:nth-of-type(even) {
+  background-color: #1C1C1C;
+}
+
+body main .feedback-cont .cont-desc .desc-grid .grid:hover {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+body main .feedback-cont .cont-desc .desc-grid .grid h2 {
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  background-image: radial-gradient(#FFFFFF, #FFFFFF99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body main .feedback-cont .cont-desc .desc-grid .grid p {
+  color: #AAAAAA;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+body main .faq-cont {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 48px 96px;
+}
+
+body main .faq-cont .cont-desc {
+  text-align: center;
+}
+
+body main .faq-cont .cont-desc h1 {
+  color: #FFFFFF;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  background-image: radial-gradient(#FFFFFF, #FFFFFF99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body main .faq-cont .cont-desc p {
+  color: #AAAAAA;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+body main .faq-cont .cont-desc .desc-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (100%)[1];
+      grid-template-columns: repeat(1, 100%);
+  gap: 24px 0%;
+  margin: 64px 0 40px 0;
+}
+
+body main .faq-cont .cont-desc .desc-list details {
+  cursor: pointer;
+  padding: 24px 16px;
+  text-align: center;
+  background-color: #1C1C1C;
+}
+
+body main .faq-cont .cont-desc .desc-list details:hover {
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+body main .faq-cont .cont-desc .desc-list details summary {
+  list-style-type: none;
+  color: #C7F702;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+body main .faq-cont .cont-desc .desc-list details p {
+  color: #AAAAAA;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+body main .map-cont {
+  width: 100%;
+}
+
+body main .map-cont .cont-desc {
+  text-align: center;
+}
+
+body main .map-cont .cont-desc h1 {
+  color: #FFFFFF;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  background-image: radial-gradient(#FFFFFF, #FFFFFF99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body main .map-cont .cont-desc p {
+  color: #AAAAAA;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+body main .map-cont iframe {
+  -webkit-filter: invert(90%);
+          filter: invert(90%);
+  margin: 64px 0 0 0;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  height: 480px;
+}
+
+body footer {
+  background-color: #000000;
+}
+
+body footer nav {
+  margin: 0 auto;
+  max-width: 1440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer nav.top {
+  padding: 48px 80px;
+  border-bottom: 1px solid #1C1C1C;
+}
+
+body footer nav.top ul li a {
+  color: #C7F702;
+}
+
+body footer nav.top ul li a:hover {
+  color: #DB51E6;
+}
+
+body footer nav.bottom {
+  padding: 24px 80px;
+  border-top: 1px solid #1C1C1C;
+}
+
+body footer nav.bottom ul li a {
+  color: #AAAAAA;
+}
+
+body footer nav.bottom ul li a:hover {
+  color: #C7F702;
+}
+
+body footer nav.bottom ul li p {
+  color: #AAAAAA;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+body footer nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body footer nav ul li {
+  margin: 0 16px;
+}
+
+body footer nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+body footer nav ul li a img {
+  display: -ms-grid;
+  display: grid;
+}
+
+@media screen and (max-width: 1024px) {
+  body header nav {
+    padding: 24px 32px;
+  }
+  body main .hero-cont, body main .feature-cont, body main .plan-cont, body main .action-cont, body main .feedback-cont, body main .faq-cont {
+    padding: 48px 48px;
+  }
+  body main .hero-cont .cont-desc .desc-flex, body main .hero-cont .cont-desc .desc-grid, body main .hero-cont .cont-desc .desc-plan, body main .hero-cont .cont-desc .desc-action, body main .feature-cont .cont-desc .desc-flex, body main .feature-cont .cont-desc .desc-grid, body main .feature-cont .cont-desc .desc-plan, body main .feature-cont .cont-desc .desc-action, body main .plan-cont .cont-desc .desc-flex, body main .plan-cont .cont-desc .desc-grid, body main .plan-cont .cont-desc .desc-plan, body main .plan-cont .cont-desc .desc-action, body main .action-cont .cont-desc .desc-flex, body main .action-cont .cont-desc .desc-grid, body main .action-cont .cont-desc .desc-plan, body main .action-cont .cont-desc .desc-action, body main .feedback-cont .cont-desc .desc-flex, body main .feedback-cont .cont-desc .desc-grid, body main .feedback-cont .cont-desc .desc-plan, body main .feedback-cont .cont-desc .desc-action, body main .faq-cont .cont-desc .desc-flex, body main .faq-cont .cont-desc .desc-grid, body main .faq-cont .cont-desc .desc-plan, body main .faq-cont .cont-desc .desc-action {
+    -ms-grid-columns: (49%)[2];
+        grid-template-columns: repeat(2, 49%);
+    gap: 24px 2%;
+  }
+  body main .hero-cont .cont-desc .desc-flex .flex:nth-of-type(3), body main .hero-cont .cont-desc .desc-grid .flex:nth-of-type(3), body main .hero-cont .cont-desc .desc-plan .flex:nth-of-type(3), body main .hero-cont .cont-desc .desc-action .flex:nth-of-type(3), body main .feature-cont .cont-desc .desc-flex .flex:nth-of-type(3), body main .feature-cont .cont-desc .desc-grid .flex:nth-of-type(3), body main .feature-cont .cont-desc .desc-plan .flex:nth-of-type(3), body main .feature-cont .cont-desc .desc-action .flex:nth-of-type(3), body main .plan-cont .cont-desc .desc-flex .flex:nth-of-type(3), body main .plan-cont .cont-desc .desc-grid .flex:nth-of-type(3), body main .plan-cont .cont-desc .desc-plan .flex:nth-of-type(3), body main .plan-cont .cont-desc .desc-action .flex:nth-of-type(3), body main .action-cont .cont-desc .desc-flex .flex:nth-of-type(3), body main .action-cont .cont-desc .desc-grid .flex:nth-of-type(3), body main .action-cont .cont-desc .desc-plan .flex:nth-of-type(3), body main .action-cont .cont-desc .desc-action .flex:nth-of-type(3), body main .feedback-cont .cont-desc .desc-flex .flex:nth-of-type(3), body main .feedback-cont .cont-desc .desc-grid .flex:nth-of-type(3), body main .feedback-cont .cont-desc .desc-plan .flex:nth-of-type(3), body main .feedback-cont .cont-desc .desc-action .flex:nth-of-type(3), body main .faq-cont .cont-desc .desc-flex .flex:nth-of-type(3), body main .faq-cont .cont-desc .desc-grid .flex:nth-of-type(3), body main .faq-cont .cont-desc .desc-plan .flex:nth-of-type(3), body main .faq-cont .cont-desc .desc-action .flex:nth-of-type(3) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  body footer nav.top {
+    padding: 48px 32px;
+  }
+  body footer nav.bottom {
+    padding: 24px 32px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  body header nav.web {
+    display: none;
+  }
+  body header nav.app {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body header nav {
+    padding: 24px 8px;
+  }
+  body main .hero-cont, body main .feature-cont, body main .plan-cont, body main .action-cont, body main .feedback-cont, body main .faq-cont {
+    padding: 48px 24px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .hero-cont .cont-desc, body main .feature-cont .cont-desc, body main .plan-cont .cont-desc, body main .action-cont .cont-desc, body main .feedback-cont .cont-desc, body main .faq-cont .cont-desc {
+    text-align: center;
+    width: 100%;
+  }
+  body main .hero-cont .cont-desc ul, body main .feature-cont .cont-desc ul, body main .plan-cont .cont-desc ul, body main .action-cont .cont-desc ul, body main .feedback-cont .cont-desc ul, body main .faq-cont .cont-desc ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 16px 0;
+  }
+  body main .hero-cont .cont-desc ul li, body main .feature-cont .cont-desc ul li, body main .plan-cont .cont-desc ul li, body main .action-cont .cont-desc ul li, body main .feedback-cont .cont-desc ul li, body main .faq-cont .cont-desc ul li {
+    margin: 16px 0;
+    width: 100%;
+  }
+  body main .hero-cont .cont-desc ul li button, body main .feature-cont .cont-desc ul li button, body main .plan-cont .cont-desc ul li button, body main .action-cont .cont-desc ul li button, body main .feedback-cont .cont-desc ul li button, body main .faq-cont .cont-desc ul li button {
+    width: 100%;
+  }
+  body main .hero-cont .cont-desc form, body main .feature-cont .cont-desc form, body main .plan-cont .cont-desc form, body main .action-cont .cont-desc form, body main .feedback-cont .cont-desc form, body main .faq-cont .cont-desc form {
+    padding: 16px 0;
+  }
+  body main .hero-cont .cont-desc form input, body main .hero-cont .cont-desc form select, body main .hero-cont .cont-desc form textarea, body main .feature-cont .cont-desc form input, body main .feature-cont .cont-desc form select, body main .feature-cont .cont-desc form textarea, body main .plan-cont .cont-desc form input, body main .plan-cont .cont-desc form select, body main .plan-cont .cont-desc form textarea, body main .action-cont .cont-desc form input, body main .action-cont .cont-desc form select, body main .action-cont .cont-desc form textarea, body main .feedback-cont .cont-desc form input, body main .feedback-cont .cont-desc form select, body main .feedback-cont .cont-desc form textarea, body main .faq-cont .cont-desc form input, body main .faq-cont .cont-desc form select, body main .faq-cont .cont-desc form textarea {
+    margin: 16px 0;
+  }
+  body main .hero-cont .cont-desc .desc-flex, body main .hero-cont .cont-desc .desc-grid, body main .hero-cont .cont-desc .desc-plan, body main .hero-cont .cont-desc .desc-action, body main .feature-cont .cont-desc .desc-flex, body main .feature-cont .cont-desc .desc-grid, body main .feature-cont .cont-desc .desc-plan, body main .feature-cont .cont-desc .desc-action, body main .plan-cont .cont-desc .desc-flex, body main .plan-cont .cont-desc .desc-grid, body main .plan-cont .cont-desc .desc-plan, body main .plan-cont .cont-desc .desc-action, body main .action-cont .cont-desc .desc-flex, body main .action-cont .cont-desc .desc-grid, body main .action-cont .cont-desc .desc-plan, body main .action-cont .cont-desc .desc-action, body main .feedback-cont .cont-desc .desc-flex, body main .feedback-cont .cont-desc .desc-grid, body main .feedback-cont .cont-desc .desc-plan, body main .feedback-cont .cont-desc .desc-action, body main .faq-cont .cont-desc .desc-flex, body main .faq-cont .cont-desc .desc-grid, body main .faq-cont .cont-desc .desc-plan, body main .faq-cont .cont-desc .desc-action {
+    -ms-grid-columns: (100%)[1];
+        grid-template-columns: repeat(1, 100%);
+    gap: 24px 0%;
+  }
+  body main .hero-cont .cont-desc .desc-flex .flex:nth-of-type(odd), body main .hero-cont .cont-desc .desc-flex .flex:nth-of-type(even), body main .hero-cont .cont-desc .desc-grid .flex:nth-of-type(odd), body main .hero-cont .cont-desc .desc-grid .flex:nth-of-type(even), body main .hero-cont .cont-desc .desc-plan .flex:nth-of-type(odd), body main .hero-cont .cont-desc .desc-plan .flex:nth-of-type(even), body main .hero-cont .cont-desc .desc-action .flex:nth-of-type(odd), body main .hero-cont .cont-desc .desc-action .flex:nth-of-type(even), body main .feature-cont .cont-desc .desc-flex .flex:nth-of-type(odd), body main .feature-cont .cont-desc .desc-flex .flex:nth-of-type(even), body main .feature-cont .cont-desc .desc-grid .flex:nth-of-type(odd), body main .feature-cont .cont-desc .desc-grid .flex:nth-of-type(even), body main .feature-cont .cont-desc .desc-plan .flex:nth-of-type(odd), body main .feature-cont .cont-desc .desc-plan .flex:nth-of-type(even), body main .feature-cont .cont-desc .desc-action .flex:nth-of-type(odd), body main .feature-cont .cont-desc .desc-action .flex:nth-of-type(even), body main .plan-cont .cont-desc .desc-flex .flex:nth-of-type(odd), body main .plan-cont .cont-desc .desc-flex .flex:nth-of-type(even), body main .plan-cont .cont-desc .desc-grid .flex:nth-of-type(odd), body main .plan-cont .cont-desc .desc-grid .flex:nth-of-type(even), body main .plan-cont .cont-desc .desc-plan .flex:nth-of-type(odd), body main .plan-cont .cont-desc .desc-plan .flex:nth-of-type(even), body main .plan-cont .cont-desc .desc-action .flex:nth-of-type(odd), body main .plan-cont .cont-desc .desc-action .flex:nth-of-type(even), body main .action-cont .cont-desc .desc-flex .flex:nth-of-type(odd), body main .action-cont .cont-desc .desc-flex .flex:nth-of-type(even), body main .action-cont .cont-desc .desc-grid .flex:nth-of-type(odd), body main .action-cont .cont-desc .desc-grid .flex:nth-of-type(even), body main .action-cont .cont-desc .desc-plan .flex:nth-of-type(odd), body main .action-cont .cont-desc .desc-plan .flex:nth-of-type(even), body main .action-cont .cont-desc .desc-action .flex:nth-of-type(odd), body main .action-cont .cont-desc .desc-action .flex:nth-of-type(even), body main .feedback-cont .cont-desc .desc-flex .flex:nth-of-type(odd), body main .feedback-cont .cont-desc .desc-flex .flex:nth-of-type(even), body main .feedback-cont .cont-desc .desc-grid .flex:nth-of-type(odd), body main .feedback-cont .cont-desc .desc-grid .flex:nth-of-type(even), body main .feedback-cont .cont-desc .desc-plan .flex:nth-of-type(odd), body main .feedback-cont .cont-desc .desc-plan .flex:nth-of-type(even), body main .feedback-cont .cont-desc .desc-action .flex:nth-of-type(odd), body main .feedback-cont .cont-desc .desc-action .flex:nth-of-type(even), body main .faq-cont .cont-desc .desc-flex .flex:nth-of-type(odd), body main .faq-cont .cont-desc .desc-flex .flex:nth-of-type(even), body main .faq-cont .cont-desc .desc-grid .flex:nth-of-type(odd), body main .faq-cont .cont-desc .desc-grid .flex:nth-of-type(even), body main .faq-cont .cont-desc .desc-plan .flex:nth-of-type(odd), body main .faq-cont .cont-desc .desc-plan .flex:nth-of-type(even), body main .faq-cont .cont-desc .desc-action .flex:nth-of-type(odd), body main .faq-cont .cont-desc .desc-action .flex:nth-of-type(even) {
+    margin: 0 0 0 0;
+  }
+  body main .hero-cont .cont-desc .desc-flex .flex:nth-of-type(4), body main .hero-cont .cont-desc .desc-grid .flex:nth-of-type(4), body main .hero-cont .cont-desc .desc-plan .flex:nth-of-type(4), body main .hero-cont .cont-desc .desc-action .flex:nth-of-type(4), body main .feature-cont .cont-desc .desc-flex .flex:nth-of-type(4), body main .feature-cont .cont-desc .desc-grid .flex:nth-of-type(4), body main .feature-cont .cont-desc .desc-plan .flex:nth-of-type(4), body main .feature-cont .cont-desc .desc-action .flex:nth-of-type(4), body main .plan-cont .cont-desc .desc-flex .flex:nth-of-type(4), body main .plan-cont .cont-desc .desc-grid .flex:nth-of-type(4), body main .plan-cont .cont-desc .desc-plan .flex:nth-of-type(4), body main .plan-cont .cont-desc .desc-action .flex:nth-of-type(4), body main .action-cont .cont-desc .desc-flex .flex:nth-of-type(4), body main .action-cont .cont-desc .desc-grid .flex:nth-of-type(4), body main .action-cont .cont-desc .desc-plan .flex:nth-of-type(4), body main .action-cont .cont-desc .desc-action .flex:nth-of-type(4), body main .feedback-cont .cont-desc .desc-flex .flex:nth-of-type(4), body main .feedback-cont .cont-desc .desc-grid .flex:nth-of-type(4), body main .feedback-cont .cont-desc .desc-plan .flex:nth-of-type(4), body main .feedback-cont .cont-desc .desc-action .flex:nth-of-type(4), body main .faq-cont .cont-desc .desc-flex .flex:nth-of-type(4), body main .faq-cont .cont-desc .desc-grid .flex:nth-of-type(4), body main .faq-cont .cont-desc .desc-plan .flex:nth-of-type(4), body main .faq-cont .cont-desc .desc-action .flex:nth-of-type(4) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  body main .hero-cont .cont-desc .desc-flex .plan button, body main .hero-cont .cont-desc .desc-flex .action button, body main .hero-cont .cont-desc .desc-grid .plan button, body main .hero-cont .cont-desc .desc-grid .action button, body main .hero-cont .cont-desc .desc-plan .plan button, body main .hero-cont .cont-desc .desc-plan .action button, body main .hero-cont .cont-desc .desc-action .plan button, body main .hero-cont .cont-desc .desc-action .action button, body main .feature-cont .cont-desc .desc-flex .plan button, body main .feature-cont .cont-desc .desc-flex .action button, body main .feature-cont .cont-desc .desc-grid .plan button, body main .feature-cont .cont-desc .desc-grid .action button, body main .feature-cont .cont-desc .desc-plan .plan button, body main .feature-cont .cont-desc .desc-plan .action button, body main .feature-cont .cont-desc .desc-action .plan button, body main .feature-cont .cont-desc .desc-action .action button, body main .plan-cont .cont-desc .desc-flex .plan button, body main .plan-cont .cont-desc .desc-flex .action button, body main .plan-cont .cont-desc .desc-grid .plan button, body main .plan-cont .cont-desc .desc-grid .action button, body main .plan-cont .cont-desc .desc-plan .plan button, body main .plan-cont .cont-desc .desc-plan .action button, body main .plan-cont .cont-desc .desc-action .plan button, body main .plan-cont .cont-desc .desc-action .action button, body main .action-cont .cont-desc .desc-flex .plan button, body main .action-cont .cont-desc .desc-flex .action button, body main .action-cont .cont-desc .desc-grid .plan button, body main .action-cont .cont-desc .desc-grid .action button, body main .action-cont .cont-desc .desc-plan .plan button, body main .action-cont .cont-desc .desc-plan .action button, body main .action-cont .cont-desc .desc-action .plan button, body main .action-cont .cont-desc .desc-action .action button, body main .feedback-cont .cont-desc .desc-flex .plan button, body main .feedback-cont .cont-desc .desc-flex .action button, body main .feedback-cont .cont-desc .desc-grid .plan button, body main .feedback-cont .cont-desc .desc-grid .action button, body main .feedback-cont .cont-desc .desc-plan .plan button, body main .feedback-cont .cont-desc .desc-plan .action button, body main .feedback-cont .cont-desc .desc-action .plan button, body main .feedback-cont .cont-desc .desc-action .action button, body main .faq-cont .cont-desc .desc-flex .plan button, body main .faq-cont .cont-desc .desc-flex .action button, body main .faq-cont .cont-desc .desc-grid .plan button, body main .faq-cont .cont-desc .desc-grid .action button, body main .faq-cont .cont-desc .desc-plan .plan button, body main .faq-cont .cont-desc .desc-plan .action button, body main .faq-cont .cont-desc .desc-action .plan button, body main .faq-cont .cont-desc .desc-action .action button {
+    width: 100%;
+  }
+  body main .hero-cont figure, body main .feature-cont figure, body main .plan-cont figure, body main .action-cont figure, body main .feedback-cont figure, body main .faq-cont figure {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 48px 0;
+  }
+  body main .hero-cont figure img, body main .feature-cont figure img, body main .plan-cont figure img, body main .action-cont figure img, body main .feedback-cont figure img, body main .faq-cont figure img {
+    width: 100%;
+  }
+  body main .hero-cont .cont-desc h1 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  body main .feature-cont .cont-desc h1, body main .plan-cont .cont-desc h1, body main .action-cont .cont-desc h1, body main .feedback-cont .cont-desc h1, body main .faq-cont .cont-desc h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  body footer nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body footer nav.top {
+    padding: 40px 8px;
+  }
+  body footer nav.bottom {
+    padding: 16px 8px;
+  }
+  body footer nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  body footer nav ul li {
+    margin: 16px 16px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

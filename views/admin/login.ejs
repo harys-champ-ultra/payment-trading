@@ -1,0 +1,22 @@
+
+    <!-- calling component header -->
+    <%- include('./components/header.ejs') -%>
+    <main>
+        <div class="hero-cont">
+            <div class="cont-desc">
+                <h1>Admin Please Login first!</h1>
+                <p>Please fill the form and continue to dashboard.</p>
+                <form action="./adminLoginPost" method="post">
+                    <span class="err"><%= err %></span>
+                    <input type="email" name="adminEmail" id="adminEmail" placeholder="Enter Email" required>
+                    <input type="password" name="adminPassword" id="adminpassword" placeholder="Enter Password" required>
+                    <input type="submit" name="adminLogin" value="Login">
+                </form>
+            </div>
+            <figure>
+                <img src="./img/adminLogin.svg" alt="Login Account">
+            </figure>
+        </div>
+    </main>
+    <!-- calling component footer -->
+    <%- include('./components/footer.ejs') -%>

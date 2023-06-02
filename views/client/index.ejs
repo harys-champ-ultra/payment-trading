@@ -1,0 +1,136 @@
+
+    <!-- calling component header -->
+    <%- include('./components/header.ejs') -%>
+    <main>
+        <div class="hero-cont">
+            <div class="cont-desc">
+                <h1>Investment Progress on the fingertips!</h1>
+                <p>PKSuccessTrading is a company that helps you save money on the daily basis using systematic algorithms to achieve success.</p>
+                <ul>
+                    <li><button onclick="window.location.href='./dashboard'" class="primary">Get Started</button></li>
+                    <li><button onclick="window.location.href='./signup'" class="secondary">Sign Up Wallet</button></li>
+                </ul>
+            </div>
+            <figure>
+                <img src="./img/hero.svg" alt="Investment">
+            </figure>
+        </div>
+        <div class="feature-cont" id="features">
+            <div class="cont-desc">
+                <h1>Get surprised by amazing features.</h1>
+                <p>Discover the value of why we can be the best as your platform for trading.</p>
+                <div class="desc-flex">
+                    <div class="flex">
+                        <figure>
+                            <img src="./img/flexA.svg" alt="Join & Invest">
+                        </figure>
+                        <h2>Join & Invest in Easy Steps</h2>
+                        <p>The company provides easy step registeration where you can easily view your profits and returns & agreement papers between companies. Visit Register page.</p>
+                    </div>
+                    <div class="flex">
+                        <figure>
+                            <img src="./img/flexB.svg" alt="Track Progress">
+                        </figure>
+                        <h2>Track Your Progress</h2>
+                        <p>Easily Track your funds, money anytime from mobile. User dashboard will be provided where you can view your investments or claim profits on daily basis.</p>
+                    </div>
+                    <div class="flex">
+                        <figure>
+                            <img src="./img/flexC.svg" alt="Improve Socialism">
+                        </figure>
+                        <h2>Improve Your Socialism</h2>
+                        <p>Meet with big investors on our website and improve your socialism, Get bonuses, Bikes, Cars in lucky draw upon referring users.</p>
+                    </div>
+                    <div class="flex">
+                        <figure>
+                            <img src="./img/flexD.svg" alt="Auto Withdrawl / Deposit">
+                        </figure>
+                        <h2>Auto Withdrawl / Deposit</h2>
+                        <p>We are connected with Major gateways where all you withdrawls & deposits be performed automatically within seconds. Because we know you always need money.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="plan-cont" id="plans">
+            <div class="cont-desc">
+                <h1>Choose you plan!</h1>
+                <p>Depsit one of the following attractive packages.</p>
+                <div class="desc-plan">
+                    <% planData.forEach(element => { %>
+                    <div class="plan">
+                        <h2><%= element.planname %></h2>
+                        <p><span><%= element.plancomission %>%</span> Refer Comission<br>1 TIME ONLY</p>
+                        <p>Daily Earn PKR <%= element.plandaily %></p>
+                        <p>Monthly Earn PKR <%= element.planmonthly %></p>
+                        <p>Plan Validity <%= element.planvalidity %> Months</p>
+                        <p>Plan Price PKR <%= element.planprice %></p>
+                        <button onclick="window.location.href='./deposit'" class="primary">Deposit</button>
+                    </div>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+        <div class="feedback-cont" id="feedbacks">
+            <div class="cont-desc">
+                <h1>Meet our clients!</h1>
+                <p>We already have users from all over the world who are connected, make on of them and get our best service, that make us proud.</p>
+                <div class="desc-grid">
+                    <% feedbackData.forEach(element => { %>
+                    <div class="grid">
+                        <h2><%= element.clientname %></h2>
+                        <p><q><%= element.feedbacktitle %></q></p>
+                    </div>
+                    <% }); %>
+                </div>
+                <ul>
+                    <li><button onclick="window.location.href='./dashboard'" class="primary">Join Us</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="faq-cont" id="faqs">
+            <div class="cont-desc">
+                <h1>Frequently ask questions.</h1>
+                <p>Ask anything, just click.</p>
+                <div class="desc-list">
+                    <details>
+                        <summary>What is PKSuccessTrading?</summary>
+                        <p>PKSuccessTrading is a trading investment website company which gives you attractive profit according to your selected depositing plan.</p>
+                    </details>
+                    <details>
+                        <summary>How PKSuccessTrading works?</summary>
+                        <p>For using it, you need to register yourself with just few required data, then you just select the particular plan and then deposit to admin bank, that already provided by admin. You can earn profit in this way.</p>
+                    </details>
+                    <details>
+                        <summary>How to Deposit amount?</summary>
+                        <p>For depositing amount, you have to choose the desired plan, then select the amount, tha admin already given his bank accounts at the deposit section. After depositing your desired amount, enter your transaction id and just hit the Deposit button, and Congrates! You just send deposit request Successfully.</p>
+                    </details>
+                    <details>
+                        <summary>How much time it takes to approve deposit request?</summary>
+                        <p>Usually, it takes upto 1 hour.</p>
+                    </details>
+                    <details>
+                        <summary>How to Withdrawal amount?</summary>
+                        <p>For withdrawl amount, go to withdrawl section, choose your desired withdrawl bank method, enter amount (depends on your total balance), enter SELECTED BANK'S account title and account number. Now just hit the Withdrawal button, and Congrates! You just send withdrawl request Successfully.</p>
+                    </details>
+                    <details>
+                        <summary>What is the minimum Withdrawal amount?</summary>
+                        <p>No Limit.</p>
+                    </details>
+                    <details>
+                        <summary>How much time it takes to approve withdrawl request?</summary>
+                        <p>Usually, it takes upto 2 hours.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+        <div class="map-cont" id="about">
+            <div class="cont-desc">
+                <h1>About us.</h1>
+                <p>You can find us on google map below.</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14338.058203567742!2d73.06824981680305!3d33.713821872429186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1659705560556!5m2!1sen!2s" title="Map from Google" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </main>
+    <button onclick="window.location.href='http://wa.me/+123456789'" style="background-color: #c7f702; padding: 8px; position: fixed; bottom: 48px; right: 24px; cursor: pointer;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: #000000; display: grid;"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977 0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188 7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112s-.58.729-.711.879-.262.168-.486.056-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387.536.231.954.369 1.279.473.537.171 1.026.146 1.413.089.431-.064 1.327-.542 1.514-1.066.187-.524.187-.973.131-1.067-.056-.094-.207-.151-.43-.263"></path></svg></button>
+    <!-- calling component footer -->
+    <%- include('./components/footer.ejs') -%>

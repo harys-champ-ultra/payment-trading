@@ -1,0 +1,253 @@
+
+    <!-- calling component header -->
+    <%- include('./components/header.ejs') -%>
+    <main>
+        <div class="action-cont" id="action">
+            <div class="cont-desc">
+                <h1>Sub-Admin <%= subadminName %>!</h1>
+                <p><%= subadminEmail %></p>
+                <div class="desc-action">
+                    <div class="action">
+                        <figure>
+                            <img src="./img/adminView.svg" alt="View Bank">
+                        </figure>
+                        <h2>See Bank Account</h2>
+                        <button onclick="window.location.href='#viewbank'" class="primary">See Banks</button>
+                    </div>
+                    <div class="action">
+                        <figure>
+                            <img src="./img/adminDepositWithdraw.svg" alt="Deposit Bank">
+                        </figure>
+                        <h2>Deposit Requests</h2>
+                        <button onclick="window.location.href='#deposit'" class="primary">See Requests</button>
+                    </div>
+                    <div class="action">
+                        <figure>
+                            <img src="./img/adminDepositWithdraw.svg" alt="Deposit Bank">
+                        </figure>
+                        <h2>Withdrawal Requests</h2>
+                        <button onclick="window.location.href='#withdraw'" class="primary">See Requests</button>
+                    </div>
+                    <div class="action">
+                        <figure>
+                            <img src="./img/adminDepositWithdraw.svg" alt="Deposit Bank">
+                        </figure>
+                        <h2>Referral Requests</h2>
+                        <button onclick="window.location.href='#referral'" class="primary">See Requests</button>
+                    </div>
+                    <div class="action">
+                        <h2>Total Deposits</h2>
+                        <% totalDeposit.forEach(element => { %>
+                            <% if((element.totaldeposit == null) || (element.totaldeposit == 0)) { %>
+                        <p><span>PKR 0</span></p>
+                            <% } else { %>
+                        <p><span>PKR <%= element.totaldeposit %></span></p>
+                            <% } %>
+                        <p>Pakistani Rupees</p>
+                        <% }); %> 
+                    </div>
+                    <div class="action">
+                        <h2>Total Withdrawals</h2>
+                        <% totalWithdraw.forEach(element => { %>
+                            <% if((element.totalwithdraw == null) || (element.totalwithdraw == 0)) { %>
+                        <p><span>PKR 0</span></p>
+                            <% } else { %>
+                        <p><span>PKR <%= element.totalwithdraw %></span></p>
+                            <% } %>
+                        <p>Pakistani Rupees</p>
+                        <% }); %> 
+                    </div>
+                    <div class="action">
+                        <figure>
+                            <img src="./img/clients.svg" alt="People Clients">
+                        </figure>
+                        <h2>All Clients</h2>
+                        <button onclick="window.location.href='#clients'" class="primary">See Clients</button>
+                    </div>
+                    <div class="action">
+                        <figure>
+                            <img src="./img/feedback.svg" alt="Feedbacks">
+                        </figure>
+                        <h2>Client Feedbacks</h2>
+                        <button onclick="window.location.href='#feedbacks'" class="primary">See Feedbacks</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="action-cont" id="viewbank">
+            <div class="cont-desc">
+                <h1>Your Banks</h1>
+                <hr>
+                <% bankData.forEach(element => { %>
+                <p>Bank Name - <strong><%= element.bankname %></strong><br>Account - <strong><%= element.bankaccount %></strong><br>Title - <strong><%= element.banktitle %></strong></p>
+                <hr>
+                <% }); %>
+            </div>
+        </div>
+        <div class="action-cont" id="deposit">
+            <div class="cont-desc">
+                <h1>Deposit Requests</h1>
+                <hr>
+                <% depositData.forEach(element => { %>
+                <p>Client Name - <strong><%= element.clientname %></strong><br>Deposit Amount - <strong><%= element.depositamount %></strong><br>Deposit Transaction - <strong><%= element.deposittransaction %></strong><br>Plan Name - <strong><%= element.planname %></strong></p>
+                <p><a href="./subacceptDeposit/<%= element.depositid %>">Accept Request</a></p>
+                <p><a style="color: red;" href="./subrejectDeposit/<%= element.depositid %>">Reject Request</a></p>
+                <hr>
+                <% }); %>
+            </div>
+        </div>
+        <div class="action-cont" id="withdraw">
+            <div class="cont-desc">
+                <h1>Withdraw Requests</h1>
+                <hr>
+                <% withdrawData.forEach(element => { %>
+                <p>Client Name - <strong><%= element.clientname %></strong><br>Withdraw Bank - <strong><%= element.withdrawbank %></strong><br>Withdraw Amount - PKR <strong><%= element.withdrawamount %></strong></strong><br>Account Title - <strong><%= element.withdrawtitle %></strong><br>Account Number - <strong><%= element.withdrawaccount %></strong></strong></p>
+                <p><a href="./subacceptWithdraw/<%= element.withdrawid %>">Accept Request</a></p>
+                <p><a style="color: red;" href="./subrejectWithdraw/<%= element.withdrawid %>">Reject Request</a></p>
+                <hr>
+                <% }); %>
+            </div>
+        </div>
+        <div class="action-cont" id="referral">
+            <div class="cont-desc">
+                <h1>Referral Requests</h1>
+                <hr>
+                <% referralData.forEach(element => { %>
+                <p>Client Name - <strong><%= element.clientname %></strong><br>Referral ID Name - <strong><%= element.referralname %></strong></p>
+                <form action="./acceptReferral" method="post">
+                    <input type="number" step="0.1" name="referralAmount" id="referralAmount" placeholder="Referral Amount" required>
+                    <input type="number" name="referralId" id="referralId" value="<%= element.referralid %>" hidden>
+                    <input type="submit" value="Accept Request">
+                </form>
+                <p><a style="color: red;" href="./subrejectReferral/<%= element.referralid %>">Reject Request</a></p>
+                <hr>
+                <% }); %>
+            </div>
+        </div>
+        <div class="feedback-cont" id="clients">
+            <div class="cont-desc">
+                <h1>Active Clients.</h1>
+                <p>All Active clients status.</p>
+                <form>
+                    <input type="search" name="searchClients" id="searchClients" placeholder="🔍 Search Clients">
+                </form>
+                <div class="scroller">
+                    <h2>All Details</h2>
+                    <table>
+                        <tr>
+                            <th>Sr.</th>
+                            <th>Client ID</th>
+                            <th>Client Name</th>
+                            <th>Client Email</th>
+                            <th>Client Phone</th>
+                            <th>Client Gender</th>
+                            <th>Activation Date</th>
+                        </tr>
+                        <% clientData.forEach(element => { %>
+                        <tbody id="showclients">
+                            <tr>
+                                <td><%= element.serialid %></td>
+                                <td><%= element.clientid %></td>
+                                <td><%= element.clientname %></td>
+                                <td><%= element.clientemail %></td>
+                                <td><%= element.clientphone %></td>
+                                <td><%= element.clientgender %></td>
+                                <td><%= element.activedate %></td>
+                            </tr>
+                        </tbody>
+                        <% }); %>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="feedback-cont" id="proofs">
+            <div class="cont-desc">
+                <h1>Pay Proofs.</h1>
+                <p>Our all Active clients pay proofs.</p>
+                <form>
+                    <input type="search" name="searchDeposit" id="searchDeposit" placeholder="🔍 Search Deposit Pay">
+                </form>
+                <div class="scroller">
+                    <h2>All Deposits</h2>
+                    <table>
+                        <tr>
+                            <th>Sr.</th>
+                            <th>Client Name</th>
+                            <th>Client Email</th>
+                            <th>Client Gender</th>
+                            <th>Total Deposits</th>
+                        </tr>
+                        <% dData.forEach(element => { %>
+                        <tbody id="showdeposit">
+                            <tr>
+                                <td><%= element.serialid %></td>
+                                <td><%= element.clientname %></td>
+                                <td><%= element.clientemail %></td>
+                                <td><%= element.clientgender %></td>
+                                <td>PKR <%= element.total %></td>
+                            </tr>
+                        </tbody>
+                        <% }); %>
+                    </table>
+                </div>
+                <form>
+                    <input type="search" name="searchWithdraw" id="searchWithdraw" placeholder="🔍 Search Withdraw Pay">
+                </form>
+                <div class="scroller">
+                    <h2>All Withdrawals</h2>
+                    <table>
+                        <tr>
+                            <th>Sr.</th>
+                            <th>Client Name</th>
+                            <th>Client Email</th>
+                            <th>Payment Method</th>
+                            <th>Total Withdrawals</th>
+                        </tr>
+                        <% wData.forEach(element => { %>
+                        <tbody id="showwithdraw">
+                            <tr>
+                                <td><%= element.serialid %></td>
+                                <td><%= element.clientname %></td>
+                                <td><%= element.clientemail %></td>
+                                <td><%= element.withdrawbank %></td>
+                                <td>PKR <%= element.total %></td>
+                            </tr>
+                        </tbody>
+                        <% }); %>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="feedback-cont" id="feedbacks">
+            <div class="cont-desc">
+                <h1>Client Feedbacks.</h1>
+                <p>All client feedback</p>
+                <form>
+                    <input type="search" name="searchFeedback" id="searchFeedback" placeholder="🔍 Search Feedback Pay">
+                </form>
+                <div class="scroller">
+                    <h2>All Details</h2>
+                    <table>
+                        <tr>
+                            <th>Sr.</th>
+                            <th>Client Name</th>
+                            <th>Client Email</th>
+                            <th>Client Feedback</th>
+                        </tr>
+                        <% feedbackData.forEach(element => { %>
+                        <tbody id="showfeedback">
+                            <tr>
+                                <td><%= element.serialid %></td>
+                                <td><%= element.clientname %></td>
+                                <td><%= element.clientemail %></td>
+                                <td><%= element.feedbacktitle %></td>
+                            </tr>
+                        </tbody>
+                        <% }); %>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- calling component footer -->
+    <%- include('./components/footer.ejs') -%>

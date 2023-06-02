@@ -1,0 +1,22 @@
+
+    <!-- calling component header -->
+    <%- include('./components/header.ejs') -%>
+    <main>
+        <div class="hero-cont">
+            <div class="cont-desc">
+                <h1>Add Bank!</h1>
+                <p>Please fill the form to add bank.</p>
+                <form action="./adminBankPost" method="post">
+                    <input type="text" name="bankName" id="bankName" placeholder="Enter Bank Name" required>
+                    <input type="number" name="bankAccount" id="bankAccount" placeholder="Enter Bank Account Number" required>
+                    <input type="text" name="bankTitle" id="bankTitle" placeholder="Enter Bank Account Title" required>
+                    <input type="submit" name="adminAdd" value="Add Bank">
+                </form>
+            </div>
+            <figure>
+                <img src="./img/adminAdd.svg" alt="Add Bank">
+            </figure>
+        </div>
+    </main>
+    <!-- calling component footer -->
+    <%- include('./components/footer.ejs') -%>
