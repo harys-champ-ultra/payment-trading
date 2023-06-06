@@ -1,4 +1,4 @@
-# Trading Web App
+# Payment Trading Website
 
 ## Instruction:
 - Open the "trading-app" directory in code editor.
